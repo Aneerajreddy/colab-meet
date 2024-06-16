@@ -1,0 +1,402 @@
+[debug] [2024-06-16T22:13:41.169Z] ----------------------------------------------------------------------
+[debug] [2024-06-16T22:13:41.172Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\19139\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-16T22:13:41.172Z] CLI Version:   13.11.2
+[debug] [2024-06-16T22:13:41.172Z] Platform:      win32
+[debug] [2024-06-16T22:13:41.172Z] Node Version:  v20.14.0
+[debug] [2024-06-16T22:13:41.172Z] Time:          Sun Jun 16 2024 17:13:41 GMT-0500 (Central Daylight Time)
+[debug] [2024-06-16T22:13:41.172Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-16T22:13:41.177Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-16T22:13:41.178Z] > authorizing via signed-in user (neerajreddy14@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\19139\Dropbox\PC\Desktop\colab\collab-meet
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-16T22:14:07.103Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-06-16T22:14:07.692Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-06-16T22:14:07.692Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project colab-meet (colab-meet) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-06-16T22:14:13.525Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-06-16T22:14:13.525Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/colab-meet
+[debug] [2024-06-16T22:14:13.892Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com 200
+[debug] [2024-06-16T22:14:13.892Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com [omitted]
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2024-06-16T22:14:13.892Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2024-06-16T22:14:13.893Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/colab-meet
+[debug] [2024-06-16T22:14:14.342Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2024-06-16T22:14:14.343Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2024-06-16T22:14:24.350Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-06-16T22:14:24.350Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/colab-meet
+[debug] [2024-06-16T22:14:24.689Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com 200
+[debug] [2024-06-16T22:14:24.689Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-06-16T22:14:24.692Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet [none]
+[debug] [2024-06-16T22:14:24.874Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet 200
+[debug] [2024-06-16T22:14:24.875Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet {"projectId":"colab-meet","projectNumber":"420726802186","displayName":"colab-meet","name":"projects/colab-meet","resources":{"hostingSite":"colab-meet"},"state":"ACTIVE","etag":"1_87952cff-683f-445b-bb6b-fdc3169c0b1a"}
+[debug] [2024-06-16T22:14:33.348Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances databaseId=colab-meet-default-rtdb&validateOnly=true
+[debug] [2024-06-16T22:14:33.348Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances {"type":"default_database"}
+[debug] [2024-06-16T22:14:33.816Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances 200
+[debug] [2024-06-16T22:14:33.817Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances {"name":"projects/420726802186/locations/us-central1/instances/colab-meet-default-rtdb","project":"projects/420726802186","databaseUrl":"https://colab-meet-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-06-16T22:14:33.818Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances databaseId=colab-meet-default-rtdb
+[debug] [2024-06-16T22:14:33.818Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances {"type":"default_database"}
+[debug] [2024-06-16T22:14:34.201Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances 200
+[debug] [2024-06-16T22:14:34.201Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/us-central1/instances {"name":"projects/420726802186/locations/us-central1/instances/colab-meet-default-rtdb","project":"projects/420726802186","databaseUrl":"https://colab-meet-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-06-16T22:14:53.350Z] >>> [apiv2][query] GET https://colab-meet-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-06-16T22:14:53.849Z] <<< [apiv2][status] GET https://colab-meet-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-06-16T22:14:53.849Z] <<< [apiv2][body] GET https://colab-meet-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for colab-meet-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[debug] [2024-06-16T22:14:53.852Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet [none]
+[debug] [2024-06-16T22:14:54.037Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet 200
+[debug] [2024-06-16T22:14:54.037Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet {"projectId":"colab-meet","projectNumber":"420726802186","displayName":"colab-meet","name":"projects/colab-meet","resources":{"hostingSite":"colab-meet","realtimeDatabaseInstance":"colab-meet-default-rtdb"},"state":"ACTIVE","etag":"1_87952cff-683f-445b-bb6b-fdc3169c0b1a"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-06-16T22:15:02.033Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-06-16T22:15:02.152Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-06-16T22:15:02.152Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.12.2","browserURL":"https://www.gstatic.com/firebasejs/10.12.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.12.2/firebase.tgz"},"live":{"version":"10.12","browserURL":"https://www.gstatic.com/firebasejs/live/10.12/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.12/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.12.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.12.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.12.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.12.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js","vertexai-preview":"https://www.gstatic.com/firebasejs/10.12.2/firebase-vertexai-preview.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\19139\Dropbox\PC\Desktop\colab\collab-meet 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=680349895&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-06-16T22:15:11.000Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-06-16T22:15:11.000Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-06-16T22:15:11.399Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-06-16T22:15:11.399Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-06-16T22:15:11.404Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-06-16T22:15:11.777Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-06-16T22:15:11.778Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Aneerajreddy","id":46821684,"node_id":"MDQ6VXNlcjQ2ODIxNjg0","avatar_url":"https://avatars.githubusercontent.com/u/46821684?v=4","gravatar_id":"","url":"https://api.github.com/users/Aneerajreddy","html_url":"https://github.com/Aneerajreddy","followers_url":"https://api.github.com/users/Aneerajreddy/followers","following_url":"https://api.github.com/users/Aneerajreddy/following{/other_user}","gists_url":"https://api.github.com/users/Aneerajreddy/gists{/gist_id}","starred_url":"https://api.github.com/users/Aneerajreddy/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Aneerajreddy/subscriptions","organizations_url":"https://api.github.com/users/Aneerajreddy/orgs","repos_url":"https://api.github.com/users/Aneerajreddy/repos","events_url":"https://api.github.com/users/Aneerajreddy/events{/privacy}","received_events_url":"https://api.github.com/users/Aneerajreddy/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":19,"public_gists":0,"followers":0,"following":0,"created_at":"2019-01-18T16:13:41Z","updated_at":"2024-02-04T01:01:34Z","private_gists":0,"total_private_repos":18,"owned_private_repos":18,"disk_usage":21372,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Aneerajreddy 
+[info] 
+[debug] [2024-06-16T22:16:36.381Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:16:36.631Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-06-16T22:16:36.631Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:16:48.344Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:16:48.557Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-06-16T22:16:48.557Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:17:07.865Z] >>> [apiv2][query] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:17:08.115Z] <<< [apiv2][status] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:17:08.115Z] <<< [apiv2][body] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:17:10.712Z] >>> [apiv2][query] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:17:10.813Z] <<< [apiv2][status] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:17:10.813Z] <<< [apiv2][body] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:17:54.205Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:17:54.489Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/actions/secrets/public-key 404
+[debug] [2024-06-16T22:17:54.489Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:17:56.042Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:17:56.144Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/actions/secrets/public-key 404
+[debug] [2024-06-16T22:17:56.144Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:18.125Z] >>> [apiv2][query] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:18.126Z] >>> [apiv2][query] GET https://api.github.com/repos///actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:18.360Z] <<< [apiv2][status] GET https://api.github.com/repos///actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:18.360Z] <<< [apiv2][body] GET https://api.github.com/repos///actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:18.378Z] <<< [apiv2][status] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:18.378Z] <<< [apiv2][body] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:19.649Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:19.755Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:19.755Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:25.354Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:25.605Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:25.605Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:26.163Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:26.258Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:26.258Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:26.620Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:26.714Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:26.714Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:26.841Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:26.936Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:26.936Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:27.025Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:27.116Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:27.116Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:27.196Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:18:27.362Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:18:27.362Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meet/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:18:33.143Z] ----------------------------------------------------------------------
+[debug] [2024-06-16T22:18:33.145Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\19139\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-16T22:18:33.145Z] CLI Version:   13.11.2
+[debug] [2024-06-16T22:18:33.145Z] Platform:      win32
+[debug] [2024-06-16T22:18:33.145Z] Node Version:  v20.14.0
+[debug] [2024-06-16T22:18:33.146Z] Time:          Sun Jun 16 2024 17:18:33 GMT-0500 (Central Daylight Time)
+[debug] [2024-06-16T22:18:33.146Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-16T22:18:33.151Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-16T22:18:33.151Z] > authorizing via signed-in user (neerajreddy14@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\19139\Dropbox\PC\Desktop\colab\collab-meet
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-16T22:19:00.046Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-06-16T22:19:00.369Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-06-16T22:19:00.370Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project colab-meet (colab-meet) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-06-16T22:19:03.267Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-06-16T22:19:03.267Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/colab-meet
+[debug] [2024-06-16T22:19:03.545Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com 200
+[debug] [2024-06-16T22:19:03.545Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/colab-meet/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-06-16T22:19:03.545Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/-/instances/colab-meet-default-rtdb [none]
+[debug] [2024-06-16T22:19:03.788Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/-/instances/colab-meet-default-rtdb 200
+[debug] [2024-06-16T22:19:03.788Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/colab-meet/locations/-/instances/colab-meet-default-rtdb {"name":"projects/420726802186/locations/us-central1/instances/colab-meet-default-rtdb","project":"projects/420726802186","databaseUrl":"https://colab-meet-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-06-16T22:19:08.890Z] >>> [apiv2][query] GET https://colab-meet-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-06-16T22:19:09.047Z] <<< [apiv2][status] GET https://colab-meet-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-06-16T22:19:09.047Z] <<< [apiv2][body] GET https://colab-meet-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for colab-meet-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[debug] [2024-06-16T22:19:09.050Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet [none]
+[debug] [2024-06-16T22:19:09.239Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet 200
+[debug] [2024-06-16T22:19:09.239Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/colab-meet {"projectId":"colab-meet","projectNumber":"420726802186","displayName":"colab-meet","name":"projects/colab-meet","resources":{"hostingSite":"colab-meet","realtimeDatabaseInstance":"colab-meet-default-rtdb"},"state":"ACTIVE","etag":"1_87952cff-683f-445b-bb6b-fdc3169c0b1a"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-06-16T22:19:16.229Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-06-16T22:19:16.374Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-06-16T22:19:16.374Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.12.2","browserURL":"https://www.gstatic.com/firebasejs/10.12.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.12.2/firebase.tgz"},"live":{"version":"10.12","browserURL":"https://www.gstatic.com/firebasejs/live/10.12/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.12/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.12.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.12.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.12.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.12.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js","vertexai-preview":"https://www.gstatic.com/firebasejs/10.12.2/firebase-vertexai-preview.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\19139\Dropbox\PC\Desktop\colab\collab-meet 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=781012136&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-06-16T22:19:20.551Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-06-16T22:19:20.551Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-06-16T22:19:20.973Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-06-16T22:19:20.973Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-06-16T22:19:20.978Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-06-16T22:19:21.308Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-06-16T22:19:21.308Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Aneerajreddy","id":46821684,"node_id":"MDQ6VXNlcjQ2ODIxNjg0","avatar_url":"https://avatars.githubusercontent.com/u/46821684?v=4","gravatar_id":"","url":"https://api.github.com/users/Aneerajreddy","html_url":"https://github.com/Aneerajreddy","followers_url":"https://api.github.com/users/Aneerajreddy/followers","following_url":"https://api.github.com/users/Aneerajreddy/following{/other_user}","gists_url":"https://api.github.com/users/Aneerajreddy/gists{/gist_id}","starred_url":"https://api.github.com/users/Aneerajreddy/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Aneerajreddy/subscriptions","organizations_url":"https://api.github.com/users/Aneerajreddy/orgs","repos_url":"https://api.github.com/users/Aneerajreddy/repos","events_url":"https://api.github.com/users/Aneerajreddy/events{/privacy}","received_events_url":"https://api.github.com/users/Aneerajreddy/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":20,"public_gists":0,"followers":0,"following":0,"created_at":"2019-01-18T16:13:41Z","updated_at":"2024-02-04T01:01:34Z","private_gists":0,"total_private_repos":18,"owned_private_repos":18,"disk_usage":21372,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Aneerajreddy 
+[info] 
+[debug] [2024-06-16T22:19:24.964Z] >>> [apiv2][query] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:19:24.965Z] >>> [apiv2][query] GET https://api.github.com/repos///actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:19:25.115Z] <<< [apiv2][status] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:19:25.116Z] <<< [apiv2][body] GET https://api.github.com/repos/Aneerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:19:25.261Z] <<< [apiv2][status] GET https://api.github.com/repos///actions/secrets/public-key 404
+[debug] [2024-06-16T22:19:25.262Z] <<< [apiv2][body] GET https://api.github.com/repos///actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:19:33.270Z] >>> [apiv2][query] GET https://api.github.com/repos/colab-meetA/neerajreddy/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:19:33.514Z] <<< [apiv2][status] GET https://api.github.com/repos/colab-meetA/neerajreddy/actions/secrets/public-key 404
+[debug] [2024-06-16T22:19:33.514Z] <<< [apiv2][body] GET https://api.github.com/repos/colab-meetA/neerajreddy/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-06-16T22:20:00.612Z] >>> [apiv2][query] GET https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/public-key type=owner
+[debug] [2024-06-16T22:20:00.853Z] <<< [apiv2][status] GET https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/public-key 200
+[debug] [2024-06-16T22:20:00.853Z] <<< [apiv2][body] GET https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/public-key {"key_id":"3380204578043523366","key":"bipjiH1CzLLSwB4Qh8+FIvU7dqjW3ry6rRLPY15LeC0="}
+[debug] [2024-06-16T22:20:00.854Z] >>> [apiv2][query] GET https://api.github.com/repos/Aneerajreddy/colab-meet [none]
+[debug] [2024-06-16T22:20:01.006Z] <<< [apiv2][status] GET https://api.github.com/repos/Aneerajreddy/colab-meet 200
+[debug] [2024-06-16T22:20:01.006Z] <<< [apiv2][body] GET https://api.github.com/repos/Aneerajreddy/colab-meet {"id":816038595,"node_id":"R_kgDOMKPCww","name":"colab-meet","full_name":"Aneerajreddy/colab-meet","private":false,"owner":{"login":"Aneerajreddy","id":46821684,"node_id":"MDQ6VXNlcjQ2ODIxNjg0","avatar_url":"https://avatars.githubusercontent.com/u/46821684?v=4","gravatar_id":"","url":"https://api.github.com/users/Aneerajreddy","html_url":"https://github.com/Aneerajreddy","followers_url":"https://api.github.com/users/Aneerajreddy/followers","following_url":"https://api.github.com/users/Aneerajreddy/following{/other_user}","gists_url":"https://api.github.com/users/Aneerajreddy/gists{/gist_id}","starred_url":"https://api.github.com/users/Aneerajreddy/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Aneerajreddy/subscriptions","organizations_url":"https://api.github.com/users/Aneerajreddy/orgs","repos_url":"https://api.github.com/users/Aneerajreddy/repos","events_url":"https://api.github.com/users/Aneerajreddy/events{/privacy}","received_events_url":"https://api.github.com/users/Aneerajreddy/received_events","type":"User","site_admin":false},"html_url":"https://github.com/Aneerajreddy/colab-meet","description":null,"fork":false,"url":"https://api.github.com/repos/Aneerajreddy/colab-meet","forks_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/forks","keys_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/keys{/key_id}","collaborators_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/teams","hooks_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/hooks","issue_events_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/issues/events{/number}","events_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/events","assignees_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/assignees{/user}","branches_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/branches{/branch}","tags_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/tags","blobs_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/git/refs{/sha}","trees_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/git/trees{/sha}","statuses_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/statuses/{sha}","languages_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/languages","stargazers_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/stargazers","contributors_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/contributors","subscribers_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/subscribers","subscription_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/subscription","commits_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/commits{/sha}","git_commits_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/git/commits{/sha}","comments_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/comments{/number}","issue_comment_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/issues/comments{/number}","contents_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/contents/{+path}","compare_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/compare/{base}...{head}","merges_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/merges","archive_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/downloads","issues_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/issues{/number}","pulls_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/pulls{/number}","milestones_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/milestones{/number}","notifications_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/labels{/name}","releases_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/releases{/id}","deployments_url":"https://api.github.com/repos/Aneerajreddy/colab-meet/deployments","created_at":"2024-06-16T22:17:43Z","updated_at":"2024-06-16T22:17:46Z","pushed_at":"2024-06-16T22:17:43Z","git_url":"git://github.com/Aneerajreddy/colab-meet.git","ssh_url":"git@github.com:Aneerajreddy/colab-meet.git","clone_url":"https://github.com/Aneerajreddy/colab-meet.git","svn_url":"https://github.com/Aneerajreddy/colab-meet","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"enabled"},"secret_scanning_push_protection":{"status":"enabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":1}
+[debug] [2024-06-16T22:20:01.008Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts [none]
+[debug] [2024-06-16T22:20:01.008Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts {"accountId":"github-action-816038595","serviceAccount":{"displayName":"GitHub Actions (Aneerajreddy/colab-meet)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository Aneerajreddy/colab-meet"}}
+[debug] [2024-06-16T22:20:01.772Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts 200
+[debug] [2024-06-16T22:20:01.772Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts [omitted]
+[debug] [2024-06-16T22:20:01.774Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com [none]
+[debug] [2024-06-16T22:20:01.774Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:getIamPolicy [none]
+[debug] [2024-06-16T22:20:01.914Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com 200
+[debug] [2024-06-16T22:20:01.914Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com {"name":"projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com","projectId":"colab-meet","uniqueId":"111675437919234684006","email":"github-action-816038595@colab-meet.iam.gserviceaccount.com","displayName":"GitHub Actions (Aneerajreddy/colab-meet)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository Aneerajreddy/colab-meet","oauth2ClientId":"111675437919234684006"}
+[debug] [2024-06-16T22:20:02.051Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:getIamPolicy 200
+[debug] [2024-06-16T22:20:02.051Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:getIamPolicy {"version":1,"etag":"BwYbCSQxQPc=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-420726802186@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-qyw47@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-qyw47@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:NEERAJREDDY14@gmail.com"]}]}
+[debug] [2024-06-16T22:20:02.052Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:setIamPolicy [none]
+[debug] [2024-06-16T22:20:02.052Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:setIamPolicy {"policy":{"version":1,"etag":"BwYbCSQxQPc=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-420726802186@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-qyw47@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-qyw47@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:NEERAJREDDY14@gmail.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2024-06-16T22:20:02.641Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:setIamPolicy 200
+[debug] [2024-06-16T22:20:02.642Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/colab-meet:setIamPolicy {"version":1,"etag":"BwYbCT/Jh6A=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-420726802186@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-qyw47@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-qyw47@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:NEERAJREDDY14@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-816038595@colab-meet.iam.gserviceaccount.com"]}]}
+[debug] [2024-06-16T22:20:02.642Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com/keys [none]
+[debug] [2024-06-16T22:20:02.642Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2024-06-16T22:20:02.944Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com/keys 200
+[debug] [2024-06-16T22:20:02.944Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com/keys {"name":"projects/colab-meet/serviceAccounts/github-action-816038595@colab-meet.iam.gserviceaccount.com/keys/e0d25894db012b0c5001c57eb0f721841dfe6e1e","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAiY29sYWItbWVldCIsCiAgInByaXZhdGVfa2V5X2lkIjogImUwZDI1ODk0ZGIwMTJiMGM1MDAxYzU3ZWIwZjcyMTg0MWRmZTZlMWUiLAogICJwcml2YXRlX2tleSI6ICItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cbk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQ0lsYlRaQXY0SnBaUzNcbmkzeFhXbFpoNEhyKy9xaUQ3S01sN1hTcVBTQmprQkdGQ285KzVFV0lXWDMyV1pYMWtvd1JUbm5yQy9jUjVrbW9cbm4xYTFSRTExb3luQk5NQ1dnbEh4bk5pZFF0K1NzQ2VFZlliZzQzbnlnMXhCTGRJQ1NJQkNEM0x6cGN1MFA1T0pcbnFVWGxtM0hnK1Z2ZnpiejhBcmwwMmtjMnZjZG5GUTRXSmZWT053Tjh4ZUhwTXF6Q2xsckp5NG5ueXFnM2UxUzhcbmlkc1pPY0wzOUkzenM4bW1Hc0lpZ2FlM241N2tRU0RER0ROZEtYL1BvUzZleHBDQ0tSNEhwSnZYcEhhbnR4NCtcbmVvOGhhQXpBckFxdHVKbE5BNUJwUHhLR3FmL3ZWZUk1S0JCZ3Y0aTNTL2x3L1BmY3QwOFdKOHlTejJQajFnZVpcbmFXaXNKS1NYQWdNQkFBRUNnZ0VBUFVYdjNpVCtBeVRoblIrNXRkUmtpVDh6M2w0dkNoUG9NdlVlVDlyaFExa1hcbnl2ZnNYUEFhRTJ1V1d5UmdaazBLZ2g4VENiT1I4TmsvTlNMYU9ySjhEMmlWckVPMm5DNjFoUzhvYkJCYWpRdHlcbmh2anJQOHM4NDJNenlWZTliV0hLREJpektJTzU2VkJXSnowbGlyWmI5YUhZS2dRNW9sSzBrU3YxSTZVcXBkNi9cbjVqSVY0d2lKL2t5cnI1NFBsR0VhNGhWcXBUbTZnU2UzTDlESWhLRjFDeVRyZ0xES2VnYWcwejhBZ3RsQzRtazNcbmU0OURmN2tod01DM2VjUW5FbUxzQXpvT3Y2Z2FhMHlwcGdia2pTbjZwdGEvb0dNYnVvSm9hRzR0MDJ4cS9Kbk5cbmtIRlJHYjFlS3RZcFROc2t5K05YWmo1Z0pnQ3ZCK2ErdGx2elQvbzdKUUtCZ1FDKzN5Z0hUSzlxRlI4MkRGODJcblJtVVJCYTlCR3RMYWdpanpzdDlPN2JMUlJSOUFzVTVBd0FTUVEyaHFJTWxtMFBJeU94Wm02QzNGWXpnZmNuUmNcbmpTbmNwbks0ZjJZbG5oTGJ3RytNVzAzazg2RXhydG9LSEVEMGVBYnZBUVV1emc3SDY1YjRNckJMWGJ3WTFSMzJcblRhSHUzc2FjWm0xM1IvV1pWMlk2QkwxWWRRS0JnUUMzTUlmODl0SC9zemRiWFhtSlB0KzJFUFYwMVJqdHVNa1BcbnVEMWswb1JBaG5LbzB5RzVsVVRHcDZGSlBhejRhaU1SeWdxVFBLRFllbFJPeFlyL2VrSXdobnZCeDhraDhNYnlcbkk3RGt3bGc5aVRubDVQSVNTN2lrOG5JK3MzdEEwOWhpR09FMTAvRjRWeHVvemF4WFZJcjZuVEpMdHpvT3M2UVZcbllaVjBqRjhIV3dLQmdIT3MvcTlkMURsd1Q1Z0w2M0FUUFpFUlp1TUlCSjJVb0lrQThNRCs0WTVlVzlCekpEK3Rcbm41Wm1vOU1keDdGZUZFcEk4UXl3elh5QTR6Ujd3dldNUDhDUHg1cjA2czBGZmR4Y1JiNUVYM0xRQy9MMlN3SXhcbm1WUVBvZlFiSkM3M2hwRzJ2Nm52M2xQdW5ONVgybTY1SWRpSWZzbXVjYzBHZVZ2VFVncjdjRjA1QW9HQUlSSHlcbnlyam9DaWdaU3pZaHRhUVRFTFFaQzZGWW9ibWxHbUJoUE8xQUVNSDB1d042YUIxSlVDOTh6MU1DQWNwdlVFdlFcbkF1cUVBdkI2ZmNudG9OYzZVYlpGYXlNYzdUS2hSNThuMVBROHA4YzVHNFpzS045Z2t1NXRyMklKVXhlclRYSStcblhkQklIRGhsZHVEQ1J2V3RMVGJwbUgrWVRJVWpqdlNSM1h0bHdGY0NnWUEzQ2JJZ1JTYTBDVUIyTFo0ZWdSZytcbjN3R2I1aXhaL2crdzJyOGpST1ptMHpCTGlMVzRCUmJqT3BrM2FmZFpPMSs4Q2dhSnh5b2tmclZyQXVGa2RNakJcbld2OEtGM1VKcXlRdmorS3RYZXUrbjlydGZmZHQyQlZ6cDZFM0xXc2tVelBuSFg0bzVSUDl6R0ZtTkoyaURSNVNcbng0a0NZeFBLd2Y2RmRrbTZnVWdmQnc9PVxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxuIiwKICAiY2xpZW50X2VtYWlsIjogImdpdGh1Yi1hY3Rpb24tODE2MDM4NTk1QGNvbGFiLW1lZXQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLAogICJjbGllbnRfaWQiOiAiMTExNjc1NDM3OTE5MjM0Njg0MDA2IiwKICAiYXV0aF91cmkiOiAiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL2F1dGgiLAogICJ0b2tlbl91cmkiOiAiaHR0cHM6Ly9vYXV0aDIuZ29vZ2xlYXBpcy5jb20vdG9rZW4iLAogICJhdXRoX3Byb3ZpZGVyX3g1MDlfY2VydF91cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3YxL2NlcnRzIiwKICAiY2xpZW50X3g1MDlfY2VydF91cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vcm9ib3QvdjEvbWV0YWRhdGEveDUwOS9naXRodWItYWN0aW9uLTgxNjAzODU5NSU0MGNvbGFiLW1lZXQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLAogICJ1bml2ZXJzZV9kb21haW4iOiAiZ29vZ2xlYXBpcy5jb20iCn0K","validAfterTime":"2024-06-16T22:19:59Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-816038595 with Firebase Hosting admin permissions. 
+[debug] [2024-06-16T22:20:02.949Z] >>> [apiv2][query] PUT https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/FIREBASE_SERVICE_ACCOUNT_COLAB_MEET [none]
+[debug] [2024-06-16T22:20:02.949Z] >>> [apiv2][body] PUT https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/FIREBASE_SERVICE_ACCOUNT_COLAB_MEET {"encrypted_value":"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","key_id":"3380204578043523366"}
+[debug] [2024-06-16T22:20:03.140Z] <<< [apiv2][status] PUT https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/FIREBASE_SERVICE_ACCOUNT_COLAB_MEET 201
+[debug] [2024-06-16T22:20:03.140Z] <<< [apiv2][body] PUT https://api.github.com/repos/Aneerajreddy/colab-meet/actions/secrets/FIREBASE_SERVICE_ACCOUNT_COLAB_MEET {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_COLAB_MEET. 
+[info] i  You can manage your secrets at https://github.com/Aneerajreddy/colab-meet/settings/secrets. 
+[info] 
